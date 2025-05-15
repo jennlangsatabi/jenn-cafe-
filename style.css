@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #d8c1b7;
+  background-image: url('1.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; 
+  color: #333;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  font-size: 14px;
+  background-color: #d8c1b7; 
+  flex-wrap: wrap;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-left a, .nav-right a {
+  text-decoration: none;
+  color: #fff; 
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.logo {
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: center;
+}
+
+.logo {
+  margin: 1rem 0;
+}
+
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 6rem;
+  background-color: #f9f5f3;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.hero-content {
+  max-width: 500px;
+  flex: 1;
+}
+
+.headline {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #2d2d2d;
+}
+
+.subheadline {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #5a5a5a;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #ddd;
+  color: #000;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #ccc;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+/* Responsive Sections */
+#rewards, .features, .testimonials {
+  padding: 3rem 2rem;
+  background-color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  font-size: 14px;
+  background-color: #f8ebe5; 
+  flex-wrap: wrap;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-left a, .nav-right a {
+  text-decoration: none;
+  color: #2d2d2d;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.logo {
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  color: #2d2d2d;
+  text-align: center;
+}
+
+.logo {
+  margin: 1rem 0;
+}
+
+.features {
+  margin-top: 1rem;
+  text-align: center;
+  background-color: #f8ebe5;
+}
+
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #2d2d2d;
+}
+
+.features-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 280px;
+  text-align: center;
+}
+
+.feature-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #493628;
+}
+
+.feature-item p {
+  font-size: 1rem;
+  color: #5a5a5a;
+}
+
+.testimonials {
+  background-color: #f8ebe5;
+  padding: 3rem 2rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+}
+
+.testimonial {
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  color: #6a4e42;
+}
+
+/* ------------------------------ */
+/* Responsive Behavior - Media Queries */
+/* ------------------------------ */
+
+@media (max-width: 992px) {
+  .hero {
+    padding: 3rem 2rem;
+  }
+
+  .headline {
+    font-size: 2.2rem;
+  }
+
+  .subheadline {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-item {
+    width: 100%;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .headline {
+    font-size: 1.8rem;
+  }
+
+  .subheadline {
+    font-size: 0.95rem;
+  }
+
+  .nav-left, .nav-right {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jenn Café Loyalty </title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #d8c1b7;
+      color: #fff;
+    }
+
+    .nav-left a,
+    .nav-right a {
+      margin: 0 0.5rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4rem 2rem;
+      background-color: #fdf8f6;
+    }
+
+    .hero-content {
+      max-width: 50%;
+    }
+
+    .hero-image img {
+      width: 300px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #d8c1b7;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #signup {
+      background-color: #fff8f3;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    #signup form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(214, 130, 130, 0.05);
+    }
+
+    #signup input[type="text"],
+    #signup input[type="email"],
+    #signup input[type="submit"] {
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    #signup input[type="submit"] {
+      background-color: #d8c1b7;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #signup input[type="submit"]:hover {
+      background-color: #d8c1b7;
+    }
+
+    small {
+      font-style: italic;
+      color: #493628;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="nav-left">
+      <a href="rewards.html">REWARDS</a>
+      <a href="testimonials.html">TESTIMONIALS</a>
+    </div>
+    <div class="logo">CAFÉ LOYALTY</div>
+    <div class="nav-right">
+      <a href="index.html">HOME</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="headline">Sip, Earn, Repeat</h1>
+      <p class="subheadline">Introducing our Loyalty Cafe — every cup counts towards your next reward.</p>
+      <a href="#signup" class="cta-button">Join Now</a>
+    </div>
+    <div class="hero-image">
+      <img src="1.jpg" alt="Smiling person holding coffee" />
+    </div>
+  </section>
+
+  <section id="signup" aria-labelledby="signupHeading">
+    <form
+      name="signupForm"
+      action="submit.php"
+      method="POST"
+      onsubmit="return validateForm()"
+      aria-describedby="formDesc"
+    >
+      <h2 id="signupHeading">Sign Up</h2>
+      <p id="formDesc">Fill in your details below to join our loyalty program.</p>
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="you@example.com"
+        required
+        aria-describedby="emailHelp"
+      />
+      <small id="emailHelp">
+        We'll never share your email with anyone else.
+      </small>
+
+      <input type="submit" value="Join Now" />
+    </form>
+  </section>
+
+  <script>
+    function validateForm() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+
+      if (name === "" || email === "") {
+        alert("Please fill out all required fields.");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</body>
+</html>
+
